@@ -1,0 +1,255 @@
+<html>
+    <head><title> My Page</title>
+    <style>
+        .odd {
+    border: 2px solid black;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 20px;
+
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+
+}
+
+/* .content {
+    background-image: url(../img/bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+} */
+/* body{
+    background-repeat: no-repeat;
+    background-size:100%;
+    background: fixed;
+} */
+
+button {
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: darkslategrey;
+    cursor: pointer;
+
+
+}
+
+input {
+    background-color: aqua;
+
+
+
+}
+
+button:hover {
+    background-color: green;
+}
+    </style>
+    <script>
+        //  OddNumber or EvenNumber 
+function OEfunction() {
+
+var ibu = document.getElementById("test").value;
+if (ibu % 2 == 1) {
+    alert("Odd Number");
+} else {
+    alert("Even Number");
+}
+}
+
+
+    //  Positive or negative Number
+
+function PNfunction() {
+var ibu = document.getElementById("Positive").value;
+if (ibu > 0) {
+    alert("positive");
+}
+else if (ibu < 0) {
+    alert("Negative");
+}
+else {
+    alert("Zero");
+}
+}
+
+
+          // calculate the EB Bill
+
+function EBfunction() {
+var num = document.getElementById("eb").value;
+if (num > 0 && num <= 100) {
+    bill = num * 0;
+}
+else if (num > 100 && num <= 200) {
+    bill = (num - 100) * 2;
+}
+else if (num > 200 && num < 300) {
+    bill = (num - 100) * 5;
+}
+else if (num > 300 && num <= 500) {
+    bill = (num - 100) * 10;
+}
+
+else if (num > 500) {
+    bill = (num - 100) * 15;
+}
+
+alert(bill)
+}
+
+      // Sum the value from
+
+function Sumfunction() {
+var num = document.getElementById("sum").value;
+
+let sum = 0;
+
+for (let ibm = 1; ibm <= num; ibm++) {
+    sum += ibm;
+}
+
+alert(sum);
+}
+
+      // Largest/Smallest number in array
+
+function Lfunction() {
+
+var num1 = document.getElementById("one").value;
+var num2 = document.getElementById("two").value;
+var num3 = document.getElementById("three").value;
+
+const largest = Math.max(num1, num2, num3);
+
+alert("The largest number is " + largest);
+}
+
+function Sfunction() {
+
+var num1 = document.getElementById("1").value;
+var num2 = document.getElementById("2").value;
+var num3 = document.getElementById("3").value;
+
+const Smallest = Math.min(num1, num2, num3);
+
+alert("The Smallest number is " + Smallest);
+}
+
+
+
+               //Find the given string is palingdrome
+
+function ibmPalindrome(str) {
+var string = document.getElementById("pm").value;
+
+const len = string.length;
+
+for (let i = 0; i < len / 2; i++) {
+
+
+    if (string[i] !== string[len - 1 - i]) {
+        alert('It is not a palindrome');
+    }
+}
+alert('It is a palindrome');
+}
+
+
+
+
+    </script></head>
+    <body>
+        <div class="content">
+            <div>
+                <div class="odd">
+                    <h1>Odd are Even</h1>
+                    <form action="">
+    
+                        <input type="number" id="test">
+                        <label for=""></label> <br>
+                        <button onclick="OEfunction();">submit</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div>
+                <div class="odd">
+                    <h1>Positive or Negative or Zero</h1>
+                    <form action="">
+    
+                        <input type="number" id="Positive">
+                        <br>
+                        <button onclick="PNfunction();">submit</button>
+                    </form>
+                </div>
+            </div>
+    
+    
+    
+            <div>
+                <div class="odd">
+                    <h1>Electricity Bill</h1>
+                    <form action="">
+    
+                        <input type="number" id="eb">
+                        <br>
+                        <button onclick="EBfunction();">submit</button>
+                    </form>
+                </div>
+    
+                <div>
+                    <div class="odd">
+                        <h1>Sum The values</h1>
+                        <form action="">
+    
+                            <input type="number" id="sum">
+                            <br>
+                            <button onclick="Sumfunction();">submit</button>
+                        </form>
+                    </div>
+    
+                    <div>
+                        <div class="odd">
+                            <h1>largest Number</h1>
+                            <form action="">
+    
+                                <input type="number" id="one" placeholder="Enter the first number"><br><br>
+                                <input type="number" id="two" placeholder="Enter the second number"><br><br>
+                                <input type="number" id="three" placeholder="Enter the third number">
+                                <br>
+                                <button onclick="Lfunction();">submit</button>
+                            </form>
+                        </div>
+    
+                        <div>
+                            <div class="odd">
+                                <h1>Smallest Number</h1>
+                                <form action="">
+    
+                                    <input type="number" id="1" placeholder="Enter the first number"><br><br>
+                                    <input type="number" id="2" placeholder="Enter the second number"><br><br>
+                                    <input type="number" id="3" placeholder="Enter the third number">
+                                    <br>
+                                    <button onclick="Sfunction();">submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="odd">
+                        <h1>palindrome</h1>
+                        <form action="">
+    
+                            <input type="name" id="pm">
+                            <br>
+                            <button onclick="ibmPalindrome();">submit</button>
+                        </form>
+                    </div>
+    
+                </div>
+    </body>
+</html>
